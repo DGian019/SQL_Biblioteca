@@ -258,3 +258,35 @@ COMMIT;
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
+
+--Solucion de la parte 2 del Laboratorio 5--
+USE biblioteca;
+UPDATE libros
+SET Disponible = FALSE
+WHERE ID_Libro = 1;
+
+--1) B --
+UPDATE prestamos
+SET Fecha_Devolucion = '2024-11-27'
+WHERE ID_Prestamos = 1;
+
+--1) C --
+USE biblioteca;
+DELETE FROM libros
+WHERE Titulo = 'Halo The Ghost Of Onyx';
+
+--2) A --
+SELECT * FROM libros
+
+--2) B --
+SELECT * FROM autores
+
+--2) C--
+USE biblioteca;
+SELECT * FROM libros
+WHERE ID_Libro = 2;
+
+--2) D--
+USE Biblioteca;
+SELECT * FROM prestamos
+WHERE MONTH (Fecha_Devolucion) = 8 AND YEAR(Fecha_Devolucion) = 2024;
